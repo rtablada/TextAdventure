@@ -1,6 +1,7 @@
 package com.theironyard;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by ryan on 9/1/16.
@@ -9,6 +10,31 @@ public class FamilyExample {
     public static void main(String[] args) {
         // Shorthand???
         String[] namesShortcut = {"Ned", "Maude", "Rod", "Todd"};
+
+        Person homer = new Person();
+        homer.firstName = "Homer";
+        homer.lastName = "Simpson";
+        homer.age = "39";
+        // Classes do not allow for arbitrary property names
+//        homer.address = "742 Evergreen Terrace";
+
+        HashMap<String, String> marge = new HashMap<>();
+
+        marge.put("firstName", "Marge");
+        marge.put("lastName", "Simpson");
+        marge.put("age", "36");
+        marge.put("address", "742 Evergreen Terrace");
+
+        System.out.println(homer.firstName);
+        System.out.println(marge.get("firstName"));
+
+        System.out.println("---");
+
+        // Create an ArrayList of family members
+        // Loop through that ArrayList
+        // Print each family member's name
+        // Concatenate a string of family member divided by ","
+        // Calculate the average age of all family members
 
         ArrayList<String> simpsons = new ArrayList<>();
         simpsons.add("Homer");
