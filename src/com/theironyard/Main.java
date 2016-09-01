@@ -11,6 +11,16 @@ public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Welcome, traveller.");
 
+        String x = "1";
+        Integer y = 3;
+        int a = 1;
+
+        System.out.println(y);
+
+        if (a == Integer.parseInt(x)) {
+            System.out.println("a == x");
+        }
+
         player.chooseName();
         player.chooseWeapon();
         player.chooseLocation();
