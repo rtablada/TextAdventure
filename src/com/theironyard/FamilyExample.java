@@ -30,10 +30,32 @@ public class FamilyExample {
 
         System.out.println("---");
 
+        // HashMaps allow looping through all available keys though...
+        for (String key: marge.keySet()) {
+            System.out.println("key: " + key + ", value: " + marge.get(key));
+        }
+
         // Create an ArrayList of family members
+        // Create an ArrayList of family members where each object is a
+        // HashMap representing a person in our family
+        ArrayList< HashMap<String, String> > simpsonsFamily = new ArrayList<>();
+        simpsonsFamily.add(marge);
+
+        // The String "Homer" does not meet the requirement of being a HashMap
+//        simpsonsFamily.add("Homer");
+
+        String firstNameCSV = "";
+
         // Loop through that ArrayList
-        // Print each family member's name
-        // Concatenate a string of family member divided by ","
+        for (HashMap<String, String> familyMember: simpsonsFamily) {
+            // Print each family member's name
+            System.out.println(familyMember.get("firstName"));
+            // Concatenate a string of family member divided by ","
+            firstNameCSV += "," + familyMember.get("firstName");
+        }
+
+        System.out.println(firstNameCSV);
+
         // Calculate the average age of all family members
 
         ArrayList<String> simpsons = new ArrayList<>();
